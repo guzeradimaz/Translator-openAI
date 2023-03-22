@@ -1,0 +1,49 @@
+.translator {
+  border-radius: 20px;
+  box-shadow: 0 0 35px 5px #dedede;
+  width: 90vw;
+  height: 90vh;
+  position: relative;
+
+  &__topbar {
+    width: 100%;
+    height: 50px;
+    border-bottom: 0.3px solid #dedede;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+    &_selector {
+      cursor: pointer;
+    }
+
+    &_switch {
+      width: 35px;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url('../../icons/switch.svg');
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    &_switch:hover {
+      transition: all 0.3s ease;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__fields {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+
+    &_field {
+      margin: 10px;
+      border: 1px solid red;
+      width: 50%;
+    }
+  }
+}

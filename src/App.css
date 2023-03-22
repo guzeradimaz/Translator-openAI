@@ -4,3 +4,13 @@
   box-sizing: border-box;
   font-family: 'Comfortaa', cursive;
 }
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

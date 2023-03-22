@@ -1,0 +1,30 @@
+.modal {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #dedede;
+  background-color: #fff;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  p:hover {
+    transform: scale(1.1);
+    color: #50a3f3;
+    transition: all 0.3s ease;
+  }
+}
