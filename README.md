@@ -1,4 +1,4 @@
- # Hi friend! This is my translator application using TypeScript & React JS library.
+ # Hi friend! This is my translator application using OpenAI & TypeScript & React JS library.
 
   It's simple to use... just write text and select language!
   
