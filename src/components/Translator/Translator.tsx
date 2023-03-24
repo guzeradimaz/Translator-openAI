@@ -24,8 +24,17 @@ export const Translator = () => {
   const [isModalFrom, setIsModalFrom] = useState<boolean>(false)
   const [isModalTo, setIsModalTo] = useState<boolean>(false)
 
+  const switchLaguages = () => {
+    const fromToSwitch = fromLanguage
+    setFromLanguage(toLanguage)
+    setToLanguage(fromToSwitch)
+    const promptToSwitch = prompt
+    setPromt(translated)
+    setTranslated(promptToSwitch)
+  }
+
   const translate = async () => {
-    if (prompt) {
+    if (prompt.trim()) {
       const newPrompt: ITranslatorProps = {
         from: fromLanguage.id,
         to: toLanguage.id,
@@ -43,9 +52,24 @@ export const Translator = () => {
     }
   }
 
+  const clear = () => {
+    setPromt('')
+    setTranslated('')
+  }
+
   useEffect(() => {
+    if (isModalFrom || isModalTo) {
+      setIsModalFrom(false)
+      setIsModalTo(false)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fromLanguage, toLanguage])
+
+  useEffect(() => {
+    if(!prompt.trim()) setTranslated('')
     translate()
-  }, [prompt])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [prompt, fromLanguage, toLanguage])
 
   return (
     <div className='translator'>
@@ -57,7 +81,9 @@ export const Translator = () => {
           setIsModal={setIsModalFrom}
           isModal={isModalFrom}
         />
-        <div className='translator__topbar_switch'></div>
+        <div
+          className='translator__topbar_switch'
+          onClick={switchLaguages}></div>
         <SelectorLanguage
           key={'secondSelector'}
           setLanguage={setToLanguage}
@@ -66,13 +92,16 @@ export const Translator = () => {
           isModal={isModalTo}
         />
       </div>
-      <div className='translator__fields'>
-        <div className='translator__fields_field'>
-          <FieldToTranslate value={prompt} setValue={setPromt} />
+      <div className='translator__bottom'>
+        <div className='translator__fields'>
+          <div className='translator__fields_field'>
+            <FieldToTranslate value={prompt} setValue={setPromt} />
+          </div>
+          <div className='translator__fields_field'>
+            <textarea value={translated} onChange={() => {}}></textarea>
+          </div>
         </div>
-        <div className='translator__fields_field'>
-          <textarea value={translated}></textarea>
-        </div>
+      <button onClick={clear}>clear</button>
       </div>
     </div>
   )

@@ -18,39 +18,68 @@ export const Languages: ILanguage[] = [
     value: 'English',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'bg',
+    value: 'Bulgarian',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'hu',
+    value: 'Hungarian',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'el',
+    value: 'Greek',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'da',
+    value: 'Danish',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'he',
+    value: 'Hebrew',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'is',
+    value: 'Icelandic',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'es-ES',
+    value: 'Spanish',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'it',
+    value: 'Italian',
   },
   {
-    id: 'en',
-    value: 'English',
+    id: 'zh-HK',
+    value: 'Chinese (Hong Kong)',
   },
+  {
+    id: 'zh-TW',
+    value: 'Chinese (Taiwan)',
+  },
+  {
+    id: 'ko',
+    value: 'Korean',
+  },
+  {
+    id: 'lt',
+    value: 'Lithuanian',
+  },
+  {
+    id: 'de',
+    value: 'German',
+  },
+  {
+    id: 'pl',
+    value: 'Polish',
+  },
+  {
+    id: 'ro',
+    value: 'Romanian',
+  },
+  {
+    id: 'fr-FR',
+    value: 'French',
+  },
+  
 ]

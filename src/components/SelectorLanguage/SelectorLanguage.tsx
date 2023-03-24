@@ -16,7 +16,7 @@ export const SelectorLanguage = ({
 
   return (
     <div className='translator__topbar_selector' onClick={handleSelectLanguage}>
-      {isModal && <ModalChooser setLanguage={setLanguage} setIsModal={setIsModal} />}
+      {isModal && <ModalChooser setLanguage={setLanguage}/>}
       {language ? language.value : 'Select language'}
     </div>
   )
