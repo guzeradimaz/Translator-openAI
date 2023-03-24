@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Translator-openAI/static/css/main.fcd3f3dd.css",
+    "main.js": "/Translator-openAI/static/js/main.ccae359c.js",
+    "index.html": "/Translator-openAI/index.html",
+    "static/media/switch.svg": "/Translator-openAI/static/media/switch.5bfcb3ae0e925054f6e6.svg",
+    "main.fcd3f3dd.css.map": "/Translator-openAI/static/css/main.fcd3f3dd.css.map",
+    "main.ccae359c.js.map": "/Translator-openAI/static/js/main.ccae359c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fcd3f3dd.css",
+    "static/js/main.ccae359c.js"
+  ]
+}
